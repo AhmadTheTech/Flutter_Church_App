@@ -25,4 +25,4 @@ This Flutter project aims to create a robust mobile application tailored for chu
 
 **Contributing:**
 
-Contributions are welcome from designers, developers, testers, and enthusiasts a like. Together, we can improve this app for the global church community. Here’s how you can contribute:
+Contributions are welcome from designers, developers, testers, and enthusiasts a like. Together, we can improve this app for the global church community.
