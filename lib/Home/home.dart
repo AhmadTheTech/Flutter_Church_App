@@ -126,46 +126,66 @@ class _MyAppHomePageState extends State<MyAppHomePage> {
                              mainAxisAlignment: MainAxisAlignment.start,
                              crossAxisAlignment: CrossAxisAlignment.start,
                              children: [
-                               Container(
-                                 height: 247,
-                                 width: 164,
-                                 decoration:  const BoxDecoration(
-                                   image: DecorationImage(
-                                     image: AssetImage('assets/images/main.png'),
-                                     fit: BoxFit.cover,
+                               GestureDetector(
+                                 onTap: (){
+                                   Navigator.push(
+                                     context,
+                                     PageRouteBuilder(
+                                       transitionDuration: const Duration(milliseconds: 500),
+                                       pageBuilder: (context, animation, secondaryAnimation) => const WomenBreakFastMetting(),
+                                       transitionsBuilder: (context, animation, secondaryAnimation, child) {
+                                         return SlideTransition(
+                                           position: Tween<Offset>(
+                                             begin: const Offset(1.0, 0.0),
+                                             end: Offset.zero,
+                                           ).animate(animation),
+                                           child: child,
+                                         );
+                                       },
+                                     ),
+                                   );
+                                 },
+                                 child: Container(
+                                   height: 247,
+                                   width: 164,
+                                   decoration:  const BoxDecoration(
+                                     image: DecorationImage(
+                                       image: AssetImage('assets/images/main.png'),
+                                       fit: BoxFit.cover,
+                                     ),
                                    ),
-                                 ),
-                                 child:  const Padding(
-                                   padding: EdgeInsets.all(10.0),
-                                   child: Column(
-                                     mainAxisAlignment: MainAxisAlignment.start,
-                                     crossAxisAlignment: CrossAxisAlignment.start,
-                                     children: [
-                                       Text(
-                                         'Sermons',
-                                         style: TextStyle(
-                                             color: Colors.white,
-                                             fontSize: 24,
-                                             fontFamily: 'Inter-b'),
-                                       ),
-                                       Spacer(),
-                                       Image(
-                                           image:
-                                           AssetImage('assets/images/play.png')),
-                                       SizedBox(
-                                         height: 05,
-                                       ),
-                                       Text(
-                                         'Watch Here',
-                                         style: TextStyle(
-                                             color: Colors.white,
-                                             fontSize: 12,
-                                             fontFamily: 'Inter'),
-                                       ),
-                                       SizedBox(
-                                         height: 06,
-                                       ),
-                                     ],
+                                   child:  const Padding(
+                                     padding: EdgeInsets.all(10.0),
+                                     child: Column(
+                                       mainAxisAlignment: MainAxisAlignment.start,
+                                       crossAxisAlignment: CrossAxisAlignment.start,
+                                       children: [
+                                         Text(
+                                           'Sermons',
+                                           style: TextStyle(
+                                               color: Colors.white,
+                                               fontSize: 24,
+                                               fontFamily: 'Inter-b'),
+                                         ),
+                                         Spacer(),
+                                         Image(
+                                             image:
+                                             AssetImage('assets/images/play.png')),
+                                         SizedBox(
+                                           height: 05,
+                                         ),
+                                         Text(
+                                           'Watch Here',
+                                           style: TextStyle(
+                                               color: Colors.white,
+                                               fontSize: 12,
+                                               fontFamily: 'Inter'),
+                                         ),
+                                         SizedBox(
+                                           height: 06,
+                                         ),
+                                       ],
+                                     ),
                                    ),
                                  ),
                                ),

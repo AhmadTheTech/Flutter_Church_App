@@ -38,6 +38,7 @@ dependencies:
   flutter_svg: ^2.0.10+1
   intl_phone_field: ^3.2.0
   flexi_image_slider: ^1.0.8
+  flutter_native_splash: ^2.4.1
 
 dev_dependencies:
   flutter_test:
